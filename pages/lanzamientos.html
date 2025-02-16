@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanzamientos - FutbolStyles</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../estilos.css/estilos.css">
-    <link rel="icon" href="/img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="icon" href="../img/logo.jpg" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">FutbolStyles</a>
@@ -21,7 +22,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="./equipos.html">Equipos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Lanzamientos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Lanzamientos</a></li>
                     <li class="nav-item"><a class="nav-link" href="./historia.html">Historia</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                 </ul>
@@ -30,26 +31,33 @@
     </nav>
 
     <header class="text-center text-white py-5" id="hero">
+        <br>
         <h1>Lanzamientos</h1>
         <p>Conoce las últimas camisetas lanzadas por los equipos</p>
     </header>
 
-    <section class="container my-5">
-        <div class="row">
-            <!-- Aquí puedes agregar la lista de lanzamientos recientes -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="img/camiseta-lanzamiento.jpg" class="card-img-top" alt="Lanzamiento Camiseta">
-                    <div class="card-body">
-                        <h5 class="card-title">Camiseta de Lanzamiento</h5>
-                        <p class="card-text">La última camiseta lanzada para la temporada.</p>
-                        <a href="#" class="btn btn-success">Ver en tienda oficial</a>
-                    </div>
-                </div>
+    <!-- Carrusel -->
+    <div id="carouselLanzamientos" class="carousel slide my-5 container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/lanzamientos.img/carrousel-tres.jpg" class="d-block w-100" alt="Camiseta 1">
             </div>
-            <!-- Agregar más lanzamientos aquí -->
+            <div class="carousel-item">
+                <img src="../img/lanzamientos.img/carrousel-dos.jpg" class="d-block w-100" alt="Camiseta 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/lanzamientos.img/carrousel-uno.jpg" class="d-block w-100" alt="Camiseta 3">
+            </div>
         </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 FutbolStyles - Todos los derechos reservados</p>
