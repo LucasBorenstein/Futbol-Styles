@@ -599,5 +599,43 @@ footer p::before {
       background-color: rgba(0, 0, 0, 0.1); /* Efecto de hover sutil */
       border-radius: 4px; /* Bordes redondeados para un toque moderno */
     }
-  }
   
+    /* Título "FutbolStyles" alineado al centro */
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+      font-size: 1.5rem;
+      z-index: 1; /* Asegura que no se cubra con el menú */
+    }
+    
+    /* Ajustes para la pestaña de Historia */
+    .history-page,
+    .content-section {
+      font-size: 1rem; /* Ajustar el tamaño de fuente para que no se corte */
+      margin: 15px; /* Asegura que haya espacio adecuado entre el contenido y los bordes */
+      padding: 0 10px; /* Añadir padding para separar el contenido de los bordes */
+      line-height: 1.5; /* Asegura una mejor legibilidad */
+      overflow-wrap: break-word; /* Rompe las palabras largas para que no salgan de la pantalla */
+      word-wrap: break-word; /* Asegura que las palabras largas no desborden */
+    }
+  
+    /* Ajustes para las imágenes dentro de la historia para que no sobresalgan */
+    .history-page img,
+    .content-section img {
+      max-width: 100%; /* Asegura que las imágenes no sobresalgan del contenedor */
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+  
+    /* Corrección de tipografía en la pestaña de Equipos */
+    .teams-page {
+      font-family: 'Arial', sans-serif; /* O la fuente que prefieras */
+    }
+  
+    /* Si hay alguna clase que cambia la tipografía de los testimonios, aplicamos esto */
+    .testimonials,
+    .teams-page {
+      font-family: inherit !important; /* Asegura que se mantenga la fuente heredada */
+    }
+  }
