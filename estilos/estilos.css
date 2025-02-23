@@ -572,6 +572,7 @@ footer p::before {
       width: 100%;
       text-align: left; /* Los enlaces alineados a la izquierda para mejor accesibilidad */
       padding: 10px 0; /* Espacio adicional para separar los enlaces */
+      background-color: #1E2A34; /* Fondo oscuro para el menú */
     }
   
     /* Ajuste de los elementos del navbar en móviles */
@@ -592,12 +593,12 @@ footer p::before {
       font-size: 1.2rem; /* Aumentar ligeramente el tamaño para mejor legibilidad */
       padding: 10px 20px; /* Más espacio para facilitar el clic */
       text-align: left; /* Alinea los textos a la izquierda */
-      transition: background-color 0.3s ease; /* Añadir transición para un toque suave */
+      color: #fff; /* Texto blanco */
     }
   
     /* Agregar efecto de hover a los enlaces para mejorar la experiencia del usuario */
     .nav-link:hover {
-      background-color: rgba(0, 0, 0, 0.1); /* Efecto de hover sutil */
+      background-color: #4CAF50; /* Color verde al pasar el mouse */
       border-radius: 4px; /* Bordes redondeados para un toque moderno */
     }
   
@@ -608,6 +609,7 @@ footer p::before {
       transform: translateX(-50%);
       top: 10px;
       font-size: 1.5rem;
+      color: #fff; /* Título blanco */
       z-index: 1; /* Asegura que no se cubra con el menú */
     }
   
@@ -616,6 +618,8 @@ footer p::before {
       font-size: 1rem; /* Ajusta el tamaño de fuente para evitar cortes */
       padding: 10px; /* Añade padding para que no quede tan pegado al borde */
       line-height: 1.5; /* Mejora la legibilidad */
+      background-color: #F4F4F4; /* Fondo gris claro */
+      color: #333; /* Texto oscuro */
       overflow-wrap: break-word; /* Evita que las palabras se desborden */
       word-wrap: break-word; /* Asegura que las palabras largas no desborden */
     }
@@ -624,6 +628,7 @@ footer p::before {
     .timeline {
       display: block;
       padding: 0 10px; /* Añade padding para separarlo de los bordes */
+      background-color: #ffffff; /* Fondo blanco para la línea de tiempo */
     }
   
     /* Asegura que los items de la línea de tiempo se apilen verticalmente */
@@ -631,9 +636,12 @@ footer p::before {
       display: block;
       margin-bottom: 20px; /* Añade espacio entre los items */
       padding: 10px; /* Añade padding para que no quede pegado el contenido */
-      border: 1px solid #ccc; /* Añadir borde para que se vea más claro */
+      border: 1px solid #ccc; /* Borde gris claro */
       border-radius: 4px; /* Bordes redondeados */
-      background-color: #f9f9f9; /* Fondo claro para cada item */
+      background-color: #e9f5e9; /* Fondo verde claro para cada item */
+      /* Eliminar cualquier animación o cambio de tamaño */
+      transition: none !important; /* Asegura que no haya transiciones */
+      transform: none !important; /* Elimina cualquier transformación */
     }
   
     /* Ajustes de imágenes para la pestaña de Historia */
@@ -660,6 +668,7 @@ footer p::before {
     .timeline-list li {
       padding: 8px 0;
       font-size: 1rem;
+      color: #333; /* Texto oscuro */
     }
   }
   
