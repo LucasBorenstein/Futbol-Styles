@@ -567,14 +567,16 @@ footer p::before {
       z-index: 1000; /* Asegura que esté por encima de otros elementos */
     }
   
-    /* Asegura que el menú se expanda correctamente en móviles */
-    .navbar-collapse {
-      width: 100%;
-      text-align: left; /* Los enlaces alineados a la izquierda para mejor accesibilidad */
-      padding: 10px 0; /* Espacio adicional para separar los enlaces */
-      background-color: #3f633f; /* Fondo oscuro para el menú */
-    }
-  
+/* Asegura que el menú se expanda correctamente en móviles */
+.navbar-collapse {
+    width: 100%;
+    text-align: left; /* Los enlaces alineados a la izquierda para mejor accesibilidad */
+    padding: 10px 0; /* Espacio adicional para separar los enlaces */
+    background: linear-gradient(to right, #388e3c, #1b5e20); /* Degradado verde más oscuro */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+
     /* Ajuste de los elementos del navbar en móviles */
     .navbar-nav {
       width: 100%;
@@ -670,6 +672,6 @@ footer p::before {
       font-size: 1rem;
       color: #333; /* Texto oscuro */
     }
-  }
-  
+}
+
   
