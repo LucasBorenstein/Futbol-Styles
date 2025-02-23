@@ -179,18 +179,57 @@ html, body {
 
 /* ===== Footer ===== */
 footer {
-    background: #004d00;
+    background: rgba(0, 0, 0, 0.8); 
     color: white;
-    font-weight: bold;
-    padding: 10px 0;
+    font-weight: normal;
+    padding: 2px 12px; 
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
     left: 0;
-    z-index: 10;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.5), 0px -1px 5px rgba(255, 215, 0, 0.3); 
+    backdrop-filter: blur(8px); 
+    border-top: 0.3px solid rgba(255, 215, 0, 0.6); 
 }
+
+footer p {
+    font-size: 0.9rem; 
+    margin: 0;
+    color: transparent;
+    background: linear-gradient(45deg, #FFD700, #00FF7F, #1E90FF); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif; 
+    text-shadow: 0 0 2px rgba(255, 215, 0, 0.5), 0 0 5px rgba(0, 255, 127, 0.3), 0 0 10px rgba(30, 144, 255, 0.2); 
+    display: inline-block;
+}
+
+footer p:hover {
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.7), 0 0 10px rgba(0, 255, 127, 0.5), 0 0 15px rgba(30, 144, 255, 0.4);
+}
+
+footer p::before {
+    content: " » ";
+    color: #FFD700;
+    display: inline-block; 
+    animation: neon 2s infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 12px rgba(0, 255, 127, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.7), 0 0 15px rgba(0, 255, 127, 0.6);
+    }
+}
+
+
+
 
 /* ===== Página de Equipos ===== */
 #equipos-page #carouselExample {
@@ -233,6 +272,8 @@ footer {
 #equipos-page .col-4 img:hover {
     transform: scale(1.05);
 }
+
+
 
 /* ===== Sección Hero Futurista ===== */
 #hero {
@@ -424,3 +465,139 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* ===== Sección de Contacto ===== */
+#contacto {
+    background: linear-gradient(to bottom, #003700, #000000); /* Degradado verde más oscuro */
+}
+
+.contacto-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)); /* Más oscuro que el original */
+    padding: 50px 15px;
+    text-align: center;
+    color: #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(20, 20, 20, 0.9); /* Fondo más oscuro */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.contacto-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+    background: rgba(30, 30, 30, 0.7);
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    background-color: #1e1e1e;
+    border-color: #00ffcc;
+    outline: none;
+}
+
+.contacto-form textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #007f00;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 767px) {
+    /* Mueve el menú hamburguesa al lado derecho y mejora su visibilidad */
+    .navbar-toggler {
+      position: relative;
+      right: 0;
+      margin-left: auto; /* Asegura que el botón esté alineado a la derecha */
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+  
+    /* Asegura que el menú se expanda correctamente en móviles */
+    .navbar-collapse {
+      width: 100%;
+      text-align: left; /* Los enlaces alineados a la izquierda para mejor accesibilidad */
+      padding: 10px 0; /* Espacio adicional para separar los enlaces */
+    }
+  
+    /* Ajuste de los elementos del navbar en móviles */
+    .navbar-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* Los elementos se apilan verticalmente */
+      padding: 0;
+      margin: 0;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 12px 0; /* Espacio entre los elementos */
+    }
+  
+    /* Asegura que los enlaces se vean bien en móviles */
+    .nav-link {
+      font-size: 1.2rem; /* Aumentar ligeramente el tamaño para mejor legibilidad */
+      padding: 10px 20px; /* Más espacio para facilitar el clic */
+      text-align: left; /* Alinea los textos a la izquierda */
+      transition: background-color 0.3s ease; /* Añadir transición para un toque suave */
+    }
+  
+    /* Agregar efecto de hover a los enlaces para mejorar la experiencia del usuario */
+    .nav-link:hover {
+      background-color: rgba(0, 0, 0, 0.1); /* Efecto de hover sutil */
+      border-radius: 4px; /* Bordes redondeados para un toque moderno */
+    }
+  }
+  
