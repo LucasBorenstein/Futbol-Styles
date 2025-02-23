@@ -559,110 +559,116 @@ footer p::before {
   
 /* Ajustes para móviles */
 @media (max-width: 767px) {
-    /* Botón hamburguesa mejorado */
+    /* Mueve el menú hamburguesa al lado derecho y mejora su visibilidad */
     .navbar-toggler {
-      position: absolute;
-      right: 20px; /* Coloca el botón en el lado derecho */
-      top: 15px; /* Espacio desde la parte superior */
-      z-index: 1000; /* Asegura que esté encima de otros elementos */
-      background-color: transparent; /* Sin fondo para el botón */
-      border: 1px solid #fff; /* Borde blanco para el botón */
-      border-radius: 50%; /* Botón redondeado */
-      padding: 10px; /* Ajusta el tamaño del botón */
-    }
-  
-    .navbar-toggler-icon {
-      background-color: #fff; /* Icono hamburguesa blanco */
-    }
-  
-    /* Ajustes del menú desplegable */
-    .navbar-collapse {
-      display: none; /* Mantener oculto el menú por defecto */
-      position: fixed;
-      top: 0;
-      left: 0;
+      position: relative;
       right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro y semitransparente */
-      padding-top: 60px; /* Espacio desde la parte superior */
-      text-align: center; /* Centrar los elementos del menú */
-      z-index: 999; /* Mantener el menú por encima de otros contenidos */
+      margin-left: auto; /* Asegura que el botón esté alineado a la derecha */
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
     }
   
-    /* Mostrar el menú al hacer clic */
-    .navbar-toggler.collapsed + .navbar-collapse {
-      display: block; /* Muestra el menú cuando se hace clic */
+    /* Asegura que el menú se expanda correctamente en móviles */
+    .navbar-collapse {
+      width: 100%;
+      text-align: left; /* Los enlaces alineados a la izquierda para mejor accesibilidad */
+      padding: 10px 0; /* Espacio adicional para separar los enlaces */
+      background-color: #3f633f; /* Fondo oscuro para el menú */
     }
   
-    /* Estilo para los enlaces del menú */
+    /* Ajuste de los elementos del navbar en móviles */
     .navbar-nav {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center; /* Centra los enlaces */
+      flex-direction: column; /* Los elementos se apilan verticalmente */
       padding: 0;
       margin: 0;
     }
   
     .navbar-nav .nav-item {
-      margin: 15px 0; /* Espacio entre los elementos */
-      width: 100%; /* Hace que los enlaces ocupen todo el ancho */
+      margin: 12px 0; /* Espacio entre los elementos */
     }
   
+    /* Asegura que los enlaces se vean bien en móviles */
     .nav-link {
-      display: block;
-      padding: 15px;
-      font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+      font-size: 1.2rem; /* Aumentar ligeramente el tamaño para mejor legibilidad */
+      padding: 10px 20px; /* Más espacio para facilitar el clic */
+      text-align: left; /* Alinea los textos a la izquierda */
       color: #fff; /* Texto blanco */
-      text-decoration: none; /* Elimina subrayado */
-      transition: background-color 0.3s ease; /* Suaviza el cambio de fondo */
-      border-radius: 4px; /* Bordes redondeados */
     }
   
-    /* Efecto hover en los enlaces */
+    /* Agregar efecto de hover a los enlaces para mejorar la experiencia del usuario */
     .nav-link:hover {
-      background-color: #4CAF50; /* Fondo verde claro al pasar el cursor */
-      color: #fff; /* Mantiene el texto blanco */
+      background-color: #4CAF50; /* Color verde al pasar el mouse */
+      border-radius: 4px; /* Bordes redondeados para un toque moderno */
     }
   
-    /* Título "FutbolStyles" centrado */
+    /* Título "FutbolStyles" alineado al centro */
     .navbar-brand {
-      position: fixed;
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 15px;
-      font-size: 1.8rem;
+      top: 10px;
+      font-size: 1.5rem;
       color: #fff; /* Título blanco */
-      z-index: 1001; /* Asegura que se mantenga por encima del menú */
+      z-index: 1; /* Asegura que no se cubra con el menú */
     }
   
-    /* Ajustes adicionales para la pestaña de Historia */
+    /* Ajustes para la pestaña de Historia */
     .history-page {
       font-size: 1rem; /* Ajusta el tamaño de fuente para evitar cortes */
-      padding: 20px;
-      line-height: 1.5;
-      background-color: #F4F4F4;
-      color: #333;
+      padding: 10px; /* Añade padding para que no quede tan pegado al borde */
+      line-height: 1.5; /* Mejora la legibilidad */
+      background-color: #F4F4F4; /* Fondo gris claro */
+      color: #333; /* Texto oscuro */
+      overflow-wrap: break-word; /* Evita que las palabras se desborden */
+      word-wrap: break-word; /* Asegura que las palabras largas no desborden */
+    }
+  
+    /* Línea de tiempo en dispositivos pequeños */
+    .timeline {
+      display: block;
+      padding: 0 10px; /* Añade padding para separarlo de los bordes */
+      background-color: #ffffff; /* Fondo blanco para la línea de tiempo */
+    }
+  
+    /* Asegura que los items de la línea de tiempo se apilen verticalmente */
+    .timeline-item {
+      display: block;
+      margin-bottom: 20px; /* Añade espacio entre los items */
+      padding: 10px; /* Añade padding para que no quede pegado el contenido */
+      border: 1px solid #ccc; /* Borde gris claro */
+      border-radius: 4px; /* Bordes redondeados */
+      background-color: #e9f5e9; /* Fondo verde claro para cada item */
+      /* Eliminar cualquier animación o cambio de tamaño */
+      transition: none !important; /* Asegura que no haya transiciones */
+      transform: none !important; /* Elimina cualquier transformación */
+    }
+  
+    /* Ajustes de imágenes para la pestaña de Historia */
+    .history-page img {
+      max-width: 100%; /* Asegura que las imágenes no sobresalgan */
+      height: auto; /* Mantiene la proporción de las imágenes */
+      display: block;
+      margin: 0 auto; /* Centra las imágenes */
+    }
+  
+    /* Si hay demasiados textos o elementos, aseguramos que no se corten */
+    .history-page p {
+      margin-bottom: 20px; /* Añadir espacio entre párrafos */
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
   
-    .timeline-item {
+    /* Ajustes adicionales si hay una lista de eventos */
+    .timeline-list {
       display: block;
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: #e9f5e9; /* Fondo verde claro */
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      transition: none !important;
-      transform: none !important;
+      padding: 10px 0;
     }
   
-    .history-page img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
+    .timeline-list li {
+      padding: 8px 0;
+      font-size: 1rem;
+      color: #333; /* Texto oscuro */
     }
   }
   
