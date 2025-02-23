@@ -556,7 +556,8 @@ footer p::before {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Ajustes para móviles */
+  
+ /* Ajustes para móviles */
 @media (max-width: 767px) {
     /* Mueve el menú hamburguesa al lado derecho y mejora su visibilidad */
     .navbar-toggler {
@@ -609,33 +610,56 @@ footer p::before {
       font-size: 1.5rem;
       z-index: 1; /* Asegura que no se cubra con el menú */
     }
-    
+  
     /* Ajustes para la pestaña de Historia */
-    .history-page,
-    .content-section {
-      font-size: 1rem; /* Ajustar el tamaño de fuente para que no se corte */
-      margin: 15px; /* Asegura que haya espacio adecuado entre el contenido y los bordes */
-      padding: 0 10px; /* Añadir padding para separar el contenido de los bordes */
-      line-height: 1.5; /* Asegura una mejor legibilidad */
-      overflow-wrap: break-word; /* Rompe las palabras largas para que no salgan de la pantalla */
+    .history-page {
+      font-size: 1rem; /* Ajusta el tamaño de fuente para evitar cortes */
+      padding: 10px; /* Añade padding para que no quede tan pegado al borde */
+      line-height: 1.5; /* Mejora la legibilidad */
+      overflow-wrap: break-word; /* Evita que las palabras se desborden */
       word-wrap: break-word; /* Asegura que las palabras largas no desborden */
     }
   
-    /* Ajustes para las imágenes dentro de la historia para que no sobresalgan */
-    .history-page img,
-    .content-section img {
-      max-width: 100%; /* Asegura que las imágenes no sobresalgan del contenedor */
-      height: auto; /* Mantiene la proporción de la imagen */
+    /* Línea de tiempo en dispositivos pequeños */
+    .timeline {
+      display: block;
+      padding: 0 10px; /* Añade padding para separarlo de los bordes */
     }
   
-    /* Corrección de tipografía en la pestaña de Equipos */
-    .teams-page {
-      font-family: 'Arial', sans-serif; /* O la fuente que prefieras */
+    /* Asegura que los items de la línea de tiempo se apilen verticalmente */
+    .timeline-item {
+      display: block;
+      margin-bottom: 20px; /* Añade espacio entre los items */
+      padding: 10px; /* Añade padding para que no quede pegado el contenido */
+      border: 1px solid #ccc; /* Añadir borde para que se vea más claro */
+      border-radius: 4px; /* Bordes redondeados */
+      background-color: #f9f9f9; /* Fondo claro para cada item */
     }
   
-    /* Si hay alguna clase que cambia la tipografía de los testimonios, aplicamos esto */
-    .testimonials,
-    .teams-page {
-      font-family: inherit !important; /* Asegura que se mantenga la fuente heredada */
+    /* Ajustes de imágenes para la pestaña de Historia */
+    .history-page img {
+      max-width: 100%; /* Asegura que las imágenes no sobresalgan */
+      height: auto; /* Mantiene la proporción de las imágenes */
+      display: block;
+      margin: 0 auto; /* Centra las imágenes */
+    }
+  
+    /* Si hay demasiados textos o elementos, aseguramos que no se corten */
+    .history-page p {
+      margin-bottom: 20px; /* Añadir espacio entre párrafos */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  
+    /* Ajustes adicionales si hay una lista de eventos */
+    .timeline-list {
+      display: block;
+      padding: 10px 0;
+    }
+  
+    .timeline-list li {
+      padding: 8px 0;
+      font-size: 1rem;
     }
   }
+  
