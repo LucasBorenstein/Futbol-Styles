@@ -720,7 +720,6 @@ footer p::before {
     .testimonial {
         font-family: 'Comic Sans MS', cursive, sans-serif;
         font-size: 1rem; /* Tamaño de fuente controlado */
-        text-transform: uppercase; /* Convierte todo el texto a mayúsculas */
         background: rgba(255, 255, 255, 0.2); /* Transparente pero visible */
         backdrop-filter: blur(2px);
         padding: 10px; /* Evita que se agrande mucho */
