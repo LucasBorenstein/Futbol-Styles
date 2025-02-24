@@ -718,8 +718,18 @@ footer p::before {
         /* Texto oscuro */
     }
     .testimonial {
-        font-family: 'Comic Sans MS', cursive, sans-serif !important;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+        background: rgba(255, 255, 255, 0.3); /* Más transparente */
+        backdrop-filter: blur(3px); /* Menos desenfoque */
+        padding: 15px;
+        border-radius: 8px; /* Bordes redondeados */
+        color: #222; /* Un poco más oscuro para contraste */
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+        text-align: center;
     }
+    
+    
 }
 
 
