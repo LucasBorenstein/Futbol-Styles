@@ -38,27 +38,45 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url('../img/carrousel-futboluno.jpg');
+    position: relative;
+    overflow: hidden;
 }
 
+/* Estilo del texto */
 #hero-text {
     text-align: center;
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.85);
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 20px;
     border: 3px solid #FFD700;
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
     text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
 }
 
 #hero-text:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1);
 }
+
+#hero-image::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 90%;
+    height: 15px;
+    background: linear-gradient(90deg, #FFD700, rgba(255, 215, 0, 0.2), #FFD700);
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
 
 /* ===== Navbar ===== */
 .navbar {
@@ -115,16 +133,40 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 400px;
+    min-height: 400px; /* Altura mínima igual para todas */
     display: flex;
     flex-direction: column;
     position: relative;
     background: #fff;
     border: 4px solid transparent;
-    background-image: linear-gradient(45deg, #28a745, #ffd700, #28a745, #ffd700);
     background-origin: border-box;
     background-clip: content-box;
     transition: all 0.3s ease;
+}
+
+/* Restante de las tarjetas (sin cambios) */
+.card-real-madrid {
+    background-image: linear-gradient(45deg, #ffffff 50%, #b5b5b5 50%);
+}
+
+.card-barcelona {
+    background-image: linear-gradient(45deg, #0066b3 50%, #d41f33 50%);
+}
+
+.card-manchester-city {
+    background-image: linear-gradient(45deg, #6cadde 50%, #ffffff 50%);
+}
+
+.card-manchester-united {
+    background-image: linear-gradient(45deg, #d22126 50%, #222222 50%);
+}
+
+.card-liverpool {
+    background-image: linear-gradient(45deg, #e70010 50%, #ffffff 50%);
+}
+
+.card-bayern-munich {
+    background-image: linear-gradient(45deg, #e00b15 50%, #444444 50%);
 }
 
 .card:hover {
@@ -132,6 +174,7 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo de las imágenes */
 .card-img-top {
     width: 100%;
     height: 250px;
@@ -139,14 +182,46 @@ body {
     background-color: white;
 }
 
+/* Estilos de texto */
+.card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 0, 255, 0.6), 0 0 5px rgba(0, 0, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-title:hover {
+    color: #ff0;
+    text-shadow: 0 0 15px #ff0, 0 0 30px #ff0, 0 0 60px #ff0;
+}
+
+.card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card-text:hover {
+    color: #f8f8f8;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
 /* ===== Botones ===== */
 .btn-success {
     background-color: #007f00;
     border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-success:hover {
     background-color: #005700;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
 }
 
 /* ===== Testimonios ===== */
@@ -230,9 +305,6 @@ footer p::before {
     }
 }
 
-
-
-
 /* ===== Página de Equipos ===== */
 #equipos-page #carouselExample {
     height: 100vh;
@@ -274,8 +346,6 @@ footer p::before {
 #equipos-page .col-4 img:hover {
     transform: scale(1.05);
 }
-
-
 
 /* ===== Sección Hero Futurista ===== */
 #hero {
@@ -578,7 +648,7 @@ footer p::before {
         padding: 10px 0;
         background: linear-gradient(to right, #388e3c, #1b5e20);
         border-radius: 10px;
-        
+
     }
 
     .navbar-nav {
@@ -629,7 +699,6 @@ footer p::before {
     .timeline {
         display: block;
         padding: 0 10px;
-
         background-color: #ffffff;
 
     }
@@ -648,7 +717,6 @@ footer p::before {
 
     .history-page img {
         max-width: 100%;
-
         height: auto;
         display: block;
         margin: 0 auto;
