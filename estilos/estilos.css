@@ -457,7 +457,7 @@ footer p::before {
     margin-right: 50px;
 }
 
-/* Animación para el texto en #hero */
+/* Animación de texto del #hero */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -473,12 +473,10 @@ footer p::before {
 /* ===== Sección de Contacto ===== */
 #contacto {
     background: linear-gradient(to bottom, #003700, #000000);
-    /* Degradado verde más oscuro */
 }
 
 .contacto-section {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-    /* Más oscuro que el original */
     padding: 50px 15px;
     text-align: center;
     color: #FFD700;
@@ -491,7 +489,6 @@ footer p::before {
     margin: 0 auto;
     padding: 30px;
     background: rgba(20, 20, 20, 0.9);
-    /* Fondo más oscuro */
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
@@ -567,66 +564,47 @@ footer p::before {
 /* Ajustes para móviles */
 @media (max-width: 767px) {
 
-    /* Mueve el menú hamburguesa al lado derecho y mejora su visibilidad */
     .navbar-toggler {
         position: relative;
         right: 0;
         margin-left: auto;
-        /* Asegura que el botón esté alineado a la derecha */
         z-index: 1000;
-        /* Asegura que esté por encima de otros elementos */
     }
 
-    /* Asegura que el menú se expanda correctamente en móviles */
+
     .navbar-collapse {
         width: 100%;
         text-align: left;
-        /* Los enlaces alineados a la izquierda para mejor accesibilidad */
         padding: 10px 0;
-        /* Espacio adicional para separar los enlaces */
         background: linear-gradient(to right, #388e3c, #1b5e20);
-        /* Degradado verde más oscuro */
         border-radius: 10px;
-        /* Esquinas redondeadas */
+        
     }
 
-
-    /* Ajuste de los elementos del navbar en móviles */
     .navbar-nav {
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* Los elementos se apilan verticalmente */
         padding: 0;
         margin: 0;
     }
 
     .navbar-nav .nav-item {
         margin: 12px 0;
-        /* Espacio entre los elementos */
     }
 
-    /* Asegura que los enlaces se vean bien en móviles */
     .nav-link {
         font-size: 1.2rem;
-        /* Aumentar ligeramente el tamaño para mejor legibilidad */
         padding: 10px 20px;
-        /* Más espacio para facilitar el clic */
         text-align: left;
-        /* Alinea los textos a la izquierda */
         color: #fff;
-        /* Texto blanco */
     }
 
-    /* Agregar efecto de hover a los enlaces para mejorar la experiencia del usuario */
     .nav-link:hover {
         background-color: #4CAF50;
-        /* Color verde al pasar el mouse */
         border-radius: 4px;
-        /* Bordes redondeados para un toque moderno */
     }
 
-    /* Título "FutbolStyles" alineado al centro */
     .navbar-brand {
         position: absolute;
         left: 50%;
@@ -634,78 +612,54 @@ footer p::before {
         top: 10px;
         font-size: 1.5rem;
         color: #fff;
-        /* Título blanco */
         z-index: 1;
-        /* Asegura que no se cubra con el menú */
     }
 
-    /* Ajustes para la pestaña de Historia */
     .history-page {
         font-size: 1rem;
-        /* Ajusta el tamaño de fuente para evitar cortes */
         padding: 10px;
-        /* Añade padding para que no quede tan pegado al borde */
         line-height: 1.5;
-        /* Mejora la legibilidad */
         background-color: #F4F4F4;
-        /* Fondo gris claro */
         color: #333;
-        /* Texto oscuro */
         overflow-wrap: break-word;
-        /* Evita que las palabras se desborden */
         word-wrap: break-word;
-        /* Asegura que las palabras largas no desborden */
     }
 
-    /* Línea de tiempo en dispositivos pequeños */
+
     .timeline {
         display: block;
         padding: 0 10px;
-        /* Añade padding para separarlo de los bordes */
+
         background-color: #ffffff;
-        /* Fondo blanco para la línea de tiempo */
+
     }
 
-    /* Asegura que los items de la línea de tiempo se apilen verticalmente */
+
     .timeline-item {
         display: block;
         margin-bottom: 20px;
-        /* Añade espacio entre los items */
         padding: 10px;
-        /* Añade padding para que no quede pegado el contenido */
         border: 1px solid #ccc;
-        /* Borde gris claro */
         border-radius: 4px;
-        /* Bordes redondeados */
         background-color: #e9f5e9;
-        /* Fondo verde claro para cada item */
-        /* Eliminar cualquier animación o cambio de tamaño */
         transition: none !important;
-        /* Asegura que no haya transiciones */
         transform: none !important;
-        /* Elimina cualquier transformación */
     }
 
-    /* Ajustes de imágenes para la pestaña de Historia */
     .history-page img {
         max-width: 100%;
-        /* Asegura que las imágenes no sobresalgan */
+
         height: auto;
-        /* Mantiene la proporción de las imágenes */
         display: block;
         margin: 0 auto;
-        /* Centra las imágenes */
     }
 
-    /* Si hay demasiados textos o elementos, aseguramos que no se corten */
     .history-page p {
         margin-bottom: 20px;
-        /* Añadir espacio entre párrafos */
         overflow-wrap: break-word;
         word-wrap: break-word;
     }
 
-    /* Ajustes adicionales si hay una lista de eventos */
     .timeline-list {
         display: block;
         padding: 10px 0;
@@ -715,14 +669,14 @@ footer p::before {
         padding: 8px 0;
         font-size: 1rem;
         color: #333;
-        /* Texto oscuro */
     }
+
     .testimonial {
         font-family: 'Comic Sans MS', cursive, sans-serif;
-        font-size: 1rem; /* Tamaño de fuente controlado */
-        background: rgba(255, 255, 255, 0.2); /* Transparente pero visible */
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(2px);
-        padding: 10px; /* Evita que se agrande mucho */
+        padding: 10px;
         border-radius: 6px;
         color: #ffffff;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
@@ -730,8 +684,6 @@ footer p::before {
         max-width: 90%;
         margin: 10px auto;
     }
-    
-    
+
+
 }
-
-
