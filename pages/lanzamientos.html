@@ -7,6 +7,7 @@
     <title>Lanzamientos - FutbolStyles</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="../estilos/lanzamientos.css"> <!-- Nueva hoja de estilos para lanzamientos -->
     <link rel="icon" href="../img/logo.jpg" type="image/x-icon">
 </head>
 
@@ -30,34 +31,43 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <header class="text-center text-white py-5" id="hero">
-        
         <h1>Lanzamientos</h1>
         <p>Conoce las últimas camisetas lanzadas por los equipos</p>
     </header>
 
-    <!-- Carrusel -->
-    <div id="carouselLanzamientos" class="carousel slide my-5 container" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../img/lanzamientos.img/carrousel-tres.jpg" class="d-block w-100" alt="Camiseta 1">
+    <!-- Sección Lanzamientos -->
+    <section id="lanzamientos-section">
+        <div class="container">
+            <!-- Cuadro de título y descripción -->
+            <div class="lanzamientos-text-box">
+                <h2 class="lanzamientos-title">Últimas Camisetas</h2>
+                <p class="lanzamientos-description">Explora los últimos lanzamientos de tus equipos favoritos y no te pierdas las novedades en camisetas.</p>
             </div>
-            <div class="carousel-item">
-                <img src="../img/lanzamientos.img/carrousel-dos.jpg" class="d-block w-100" alt="Camiseta 2">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/lanzamientos.img/carrousel-uno.jpg" class="d-block w-100" alt="Camiseta 3">
+
+            <!-- Carrusel -->
+            <div id="carouselLanzamientos" class="carousel slide my-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/lanzamientos.img/carrousel-tres.jpg" class="d-block w-100" alt="Camiseta 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/lanzamientos.img/carrousel-dos.jpg" class="d-block w-100" alt="Camiseta 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/lanzamientos.img/carrousel-uno.jpg" class="d-block w-100" alt="Camiseta 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselLanzamientos" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-
-    
+    </section>
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 FutbolStyles - Todos los derechos reservados</p>

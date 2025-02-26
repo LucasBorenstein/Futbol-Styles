@@ -142,6 +142,9 @@ body {
     background-origin: border-box;
     background-clip: content-box;
     transition: all 0.3s ease;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
 }
 
 /* Restante de las tarjetas (sin cambios) */
@@ -217,12 +220,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 10px; /* Asegura que el botón no se quede pegado al texto */
 }
 
 .btn-success:hover {
     background-color: #005700;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
 }
+
 
 /* ===== Testimonios ===== */
 .testimonial {
@@ -632,7 +637,7 @@ footer p::before {
 
 
 /* Ajustes para móviles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .navbar-toggler {
         position: relative;
@@ -754,4 +759,160 @@ footer p::before {
     }
 
 
+}
+
+
+/* Lanzamientos */
+#lanzamientos-section {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #005700, #000000);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de líneas futuristas en el fondo */
+#lanzamientos-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/futuristic-lines.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.lanzamientos-text-box {
+    display: inline-block;
+    padding: 40px 60px; /* Aumentamos el padding para que sea más espacioso */
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro más pronunciado */
+    border-radius: 30px; /* Bordes más redondeados */
+    border: 4px solid #00ffcc; /* Borde de color futurista más grueso */
+    box-shadow: 0 15px 60px rgba(0, 255, 204, 0.7); /* Sombra más intensa y difusa */
+    position: relative;
+    z-index: 2;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Para asegurar que el contenido no se desborde */
+}
+
+.lanzamientos-text-box:hover {
+    box-shadow: 0 20px 80px rgba(0, 255, 204, 0.9); /* Efecto de zoom y sombra más fuerte al pasar el ratón */
+    transform: scale(1.05); /* Efecto de zoom sutil */
+}
+
+.lanzamientos-title {
+    font-size: 3rem; /* Ajustamos el tamaño para que sea más grande */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-weight: 700;
+    color: #00ffcc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0 0 25px rgba(0, 255, 204, 0.7);
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+.lanzamientos-description {
+    font-size: 1.5rem; /* Ajustamos un poco el tamaño para mejor legibilidad */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #f2f2f2;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto para palabras clave dentro de la descripción */
+.lanzamientos-description span {
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.lanzamientos-description span:hover {
+    color: #00ffcc; /* Cambio de color al pasar el cursor */
+}
+
+/* Carrusel */
+#carouselLanzamientos {
+    max-width: 100%;
+    height: 700px; /* Mayor altura para el carrusel */
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 255, 204, 0.2);
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    z-index: 2;
+}
+
+#carouselLanzamientos .carousel-inner {
+    height: 100%;
+}
+
+#carouselLanzamientos .carousel-item {
+    height: 100%;
+}
+
+#carouselLanzamientos .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease, filter 0.3s ease;
+}
+
+#carouselLanzamientos .carousel-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Diseño de los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 123, 255, 0.8);
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators .active {
+    background-color: #00ffcc;
+}
+
+/* Media Query para mejorar la visualización en móviles */
+@media (max-width: 768px) {
+    #lanzamientos-section {
+        padding: 50px 0;
+    }
+
+    .lanzamientos-title {
+        font-size: 2.4rem; /* Reducimos un poco el tamaño en móvil */
+    }
+
+    .lanzamientos-description {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    #carouselLanzamientos {
+        height: 500px;
+    }
 }
