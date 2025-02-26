@@ -762,175 +762,285 @@ footer p::before {
 }
 
 
-/* Lanzamientos */
-#lanzamientos-section {
-    padding: 100px 0;
+/* Ranking (anteriormente Lanzamientos) */
+/* Estilo para el botón de Votar */
+
+
+.votes {
+    font-size: 0.9rem; /* Tamaño más pequeño pero legible */
+    font-weight: bold; /* Negrita */
+    color: #ffd700; /* Dorado, acorde al estilo futbolero */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+.shirt-name {
+    font-size: 0.9rem; /* Tamaño legible pero pequeño */
+    font-weight: bold;
+    color: #fff; /* Blanco para destacar */
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+.btn-vote {
+    background-color: #28a745; /* Verde */
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px; /* Reducido el tamaño del padding */
+    font-size: 1rem; /* Reducido el tamaño de la fuente */
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: transform 0.2s ease; /* Agregamos transición para la animación */
+}
+
+/* Animación de escalado al hacer clic */
+.btn-vote:active {
+    transform: scale(0.95); /* El botón se reduce un 5% */
+}
+
+/* Efecto al pasar el cursor */
+.btn-vote:hover {
+    background-color: #218838; /* Cambiamos el color al pasar el cursor */
+    cursor: pointer;
+}
+
+
+#ranking-section {
+    padding: 120px 0 80px; /* Aumentamos el padding superior y agregamos padding inferior */
     text-align: center;
     background: linear-gradient(135deg, #005700, #000000);
     position: relative;
     overflow: hidden;
 }
 
-/* Efecto de líneas futuristas en el fondo */
-#lanzamientos-section::before {
+/* Fondo minimalista con líneas futuristas sutiles */
+#ranking-section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/futuristic-lines.png') no-repeat center center;
-    background-size: cover;
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(15, 15, 15, 0.9));
+    mask-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 80%);
+    opacity: 0.6;
     z-index: 1;
 }
 
-.lanzamientos-text-box {
+/* Cuadro de texto con diseño más limpio */
+.ranking-text-box {
     display: inline-block;
-    padding: 40px 60px; /* Aumentamos el padding para que sea más espacioso */
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro más pronunciado */
-    border-radius: 30px; /* Bordes más redondeados */
-    border: 4px solid #00ffcc; /* Borde de color futurista más grueso */
-    box-shadow: 0 15px 60px rgba(0, 255, 204, 0.7); /* Sombra más intensa y difusa */
+    padding: 50px 60px;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 204, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 255, 204, 0.2);
     position: relative;
     z-index: 2;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden; /* Para asegurar que el contenido no se desborde */
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.lanzamientos-text-box:hover {
-    box-shadow: 0 20px 80px rgba(0, 255, 204, 0.9); /* Efecto de zoom y sombra más fuerte al pasar el ratón */
-    transform: scale(1.05); /* Efecto de zoom sutil */
+.ranking-text-box:hover {
+    box-shadow: 0 10px 50px rgba(0, 255, 204, 0.4);
+    transform: translateY(-3px);
 }
 
-.lanzamientos-title {
-    font-size: 3rem; /* Ajustamos el tamaño para que sea más grande */
-    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
-    font-weight: 700;
+/* Estilo del título */
+.ranking-title {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
     color: #00ffcc;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Aumentamos el margen inferior para no pegarlo al hero */
     text-transform: uppercase;
-    letter-spacing: 6px;
-    text-shadow: 0 0 25px rgba(0, 255, 204, 0.7);
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
     position: relative;
     z-index: 2;
-    transition: color 0.3s ease;
 }
-.lanzamientos-description {
-    font-size: 1.5rem; /* Ajustamos un poco el tamaño para mejor legibilidad */
+
+/* Descripción */
+.ranking-description {
+    font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: #f2f2f2;
-    margin-bottom: 60px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    letter-spacing: 2px;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 0.8px;
+    text-align: center;
     position: relative;
     z-index: 2;
 }
 
-/* Efecto para palabras clave dentro de la descripción */
-.lanzamientos-description span {
-    font-weight: 600;
+/* Resaltado de palabras clave */
+.ranking-description span {
+    font-weight: 500;
     text-transform: uppercase;
+    color: #00ffaa;
     transition: color 0.3s ease;
 }
 
-.lanzamientos-description span:hover {
-    color: #00ffcc; /* Cambio de color al pasar el cursor */
+.ranking-description span:hover {
+    color: #ffffff;
 }
 
-/* Carrusel */
-#carouselLanzamientos {
-    max-width: 100%;
-    height: 700px; /* Mayor altura para el carrusel */
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 255, 204, 0.2);
-    overflow: hidden;
+/* Nuevo Ranking - Top 10 */
+#ranking-list {
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+    padding: 80px 0;
+    text-align: center;
     position: relative;
-    background-color: #000;
-    z-index: 2;
 }
 
-#carouselLanzamientos .carousel-inner {
-    height: 100%;
+/* Título del ranking */
+.ranking-title-box {
+    margin-bottom: 40px;
 }
 
-#carouselLanzamientos .carousel-item {
-    height: 100%;
+.ranking-title {
+    font-size: 2.8rem;
+    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
 }
 
-#carouselLanzamientos .carousel-item img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease, filter 0.3s ease;
+.ranking-description {
+    font-size: 1.5rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: auto;
 }
 
-#carouselLanzamientos .carousel-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+/* Podio (Top 3) */
+.ranking-podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 50px; /* Aumentamos el margen inferior para evitar que quede pegado al siguiente contenido */
+    gap: 30px;
 }
 
-/* Diseño de los controles del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
+.podium-item {
+    position: relative;
+    text-align: center;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.podium-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5);
+}
+
+.podium-item .position {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.first-place img {
+    width: 250px;
+    box-shadow: 0 15px 50px rgba(0, 255, 204, 0.8);
+}
+
+.second-place img {
+    width: 180px;
+    opacity: 0.9;
+}
+
+.third-place img {
+    width: 180px;
+    opacity: 0.9;
+}
+
+/* Lista de camisetas (Top 4 - 10) */
+.ranking-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 80px; /* Agregamos margen inferior para evitar que se tape con el footer */
+}
+
+/* Estilo de los elementos en la lista */
+.ranking-item {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: rgba(0, 123, 255, 0.8);
+.ranking-item:hover {
+    transform: scale(1.1);
 }
 
-/* Indicadores del carrusel */
-.carousel-indicators li {
-    background-color: rgba(255, 255, 255, 0.5);
+.ranking-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.5);
 }
 
-.carousel-indicators .active {
-    background-color: #00ffcc;
+.ranking-item .ranking-position {
+    display: block;
+    font-size: 1.5rem;
+    color: #00ffcc;
+    margin-bottom: 10px;
 }
 
-/* Media Query para dispositivos pequeños */
-@media (max-width: 768px) {
-    #lanzamientos-section {
-        padding: 50px 20px; /* Menos padding en móviles, con algo de espacio lateral */
+/* Responsividad para dispositivos móviles */
+@media (max-width: 767px) {
+    .ranking-podium {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .lanzamientos-text-box {
-        padding: 20px 25px; /* Reducción del padding para ajustarse mejor al espacio móvil */
-        max-width: 100%; /* El cuadro ocupa el 100% del ancho en móviles */
-        margin: 0 auto; /* Centrado del cuadro */
+    .ranking-podium .podium-item {
+        margin-bottom: 20px;
+        width: 80%;
     }
 
-    .lanzamientos-title {
-        font-size: 2.2rem; /* Ajustamos el tamaño para que no se vea demasiado grande */
-        margin-bottom: 10px;
-        line-height: 1.3; /* Mejoramos la legibilidad */
+    .ranking-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 80%;
     }
 
-    .lanzamientos-description {
-        font-size: 1.1rem; /* Reducimos el tamaño de la descripción */
-        margin-bottom: 20px; /* Menos margen en la parte inferior */
-        padding: 0 15px; /* Añadimos algo de padding para mejorar la lectura */
-        line-height: 1.6; /* Ajustamos el interlineado para que sea más cómodo de leer */
-    }
-
-    #carouselLanzamientos {
-        height: 350px; /* Reducimos aún más la altura del carrusel en móviles */
-    }
-
-    /* Aseguramos que las imágenes en el carrusel se adapten al contenedor */
-    .carousel-item img {
-        object-fit: cover; /* Aseguramos que la imagen ocupe todo el espacio sin deformarse */
+    .ranking-item img {
         width: 100%;
-        height: 100%;
+        height: auto;
+    }
+
+    .camiseta-title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-vote {
+        display: none; /* Ocultar el botón en dispositivos móviles */
     }
 }
-
