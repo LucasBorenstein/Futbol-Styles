@@ -1040,7 +1040,5 @@ footer p::before {
         margin-top: 10px;
     }
 
-    .btn-vote {
-        display: none; /* Ocultar el botón en dispositivos móviles */
-    }
+
 }
