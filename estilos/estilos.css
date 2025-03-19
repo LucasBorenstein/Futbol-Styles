@@ -134,7 +134,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-height: 400px; /* Altura mínima igual para todas */
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -143,12 +143,12 @@ body {
     background-origin: border-box;
     background-clip: content-box;
     transition: all 0.3s ease;
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center; /* Centra el texto dentro de la tarjeta */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* Restante de las tarjetas (sin cambios) */
+/* Restante de las tarjetas */
 .card-real-madrid {
     background-image: linear-gradient(45deg, #ffffff 50%, #b5b5b5 50%);
 }
@@ -221,42 +221,12 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 10px; /* Asegura que el botón no se quede pegado al texto */
+    margin-top: 10px;
 }
 
 .btn-success:hover {
     background-color: #005700;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-}
-
-
-/* ===== Testimonios ===== */
-.testimonial {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-    max-width: 80%;
-    font-family: 'Comic Sans MS';
-    font-size: 1rem;
-    font-style: italic;
-}
-
-.testimonial p {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 10px;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.9);
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.testimonial p:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 1);
 }
 
 /* ===== Footer ===== */
@@ -346,22 +316,61 @@ footer p::before {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 #equipos-page .col-4 img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
+
+/* ===== Testimonios ===== */
+.testimonial {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 80%;
+    font-family: 'Comic Sans MS';
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.testimonial h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgba(255, 215, 0, 0.9);
+}
+
+.testimonial p {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.9);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.testimonial p:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(255, 215, 0, 1);
+}
+
 
 /* ===== Sección Hero Futurista ===== */
 #hero {
-    min-height: 40vh; /* Mantengo la altura del hero */
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Mantengo el contenido centrado */
+    justify-content: center;
     align-items: center;
-    padding-top: 90px; /* Bajé un poco más el contenido */
-    padding-bottom: 20px; /* Mantengo el padding inferior reducido */
+    padding-top: 90px;
+    padding-bottom: 20px;
     text-align: center;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.9));
     border-bottom: 2px solid rgba(255, 215, 0, 0.5);
@@ -388,6 +397,7 @@ footer p::before {
         opacity: 0;
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -402,7 +412,7 @@ footer p::before {
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
     letter-spacing: 2px;
-    margin: 5px 0; /* Mantengo el margen reducido */
+    margin: 5px 0;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease-out forwards;
@@ -415,7 +425,7 @@ footer p::before {
     color: rgba(255, 255, 255, 0.8);
     max-width: 600px;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-    margin: 5px 0; /* Menos margen entre título y párrafo */
+    margin: 5px 0;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease-out forwards 0.5s;
@@ -425,8 +435,8 @@ footer p::before {
 @media (max-width: 768px) {
     #hero {
         min-height: 30vh;
-        padding-top: 110px; /* Más espacio superior en móviles */
-        padding-bottom: 40px; /* Ajusté el padding inferior en móviles */
+        padding-top: 110px;
+        padding-bottom: 40px;
     }
 
     #hero h1 {
@@ -436,8 +446,8 @@ footer p::before {
     #hero p {
         font-size: 1rem;
     }
-}
 
+}
 
 /* ===== Timeline ===== */
 .timeline {
@@ -788,14 +798,14 @@ footer p::before {
 }
 
 
-/* Ranking (anteriormente Lanzamientos) */
+/* Ranking */
 /* Estilo para el botón de Votar */
 
 
 .votes {
-    font-size: 0.9rem; /* Tamaño más pequeño pero legible */
-    font-weight: bold; /* Negrita */
-    color: #ffd700; /* Dorado, acorde al estilo futbolero */
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffd700;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -803,10 +813,12 @@ footer p::before {
     text-align: center;
     margin-top: 5px;
 }
+
+
 .shirt-name {
-    font-size: 0.9rem; /* Tamaño legible pero pequeño */
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #fff; /* Blanco para destacar */
+    color: #fff;
     text-align: center;
     margin-top: 5px;
     text-transform: uppercase;
@@ -816,38 +828,38 @@ footer p::before {
 
 
 .btn-vote {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745;
     border: none;
     color: white;
     font-weight: bold;
-    padding: 10px 25px; /* Reducido el tamaño del padding */
-    font-size: 1rem; /* Reducido el tamaño de la fuente */
+    padding: 10px 25px;
+    font-size: 1rem;
     text-transform: uppercase;
     border-radius: 50px;
-    transition: transform 0.2s ease; /* Agregamos transición para la animación */
+    transition: transform 0.2s ease;
 }
 
 /* Animación de escalado al hacer clic */
 .btn-vote:active {
-    transform: scale(0.95); /* El botón se reduce un 5% */
+    transform: scale(0.95);
 }
 
 /* Efecto al pasar el cursor */
 .btn-vote:hover {
-    background-color: #218838; /* Cambiamos el color al pasar el cursor */
+    background-color: #218838;
     cursor: pointer;
 }
 
 
 #ranking-section {
-    padding: 120px 0 80px; /* Aumentamos el padding superior y agregamos padding inferior */
+    padding: 120px 0 80px;
     text-align: center;
     background: linear-gradient(135deg, #005700, #000000);
     position: relative;
     overflow: hidden;
 }
 
-/* Fondo minimalista con líneas futuristas sutiles */
+/* Fondo minimalista */
 #ranking-section::before {
     content: "";
     position: absolute;
@@ -861,7 +873,7 @@ footer p::before {
     z-index: 1;
 }
 
-/* Cuadro de texto con diseño más limpio */
+/* Cuadro de texto */
 .ranking-text-box {
     display: inline-block;
     padding: 50px 60px;
@@ -886,7 +898,7 @@ footer p::before {
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     color: #00ffcc;
-    margin-bottom: 25px; /* Aumentamos el margen inferior para no pegarlo al hero */
+    margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
@@ -894,7 +906,7 @@ footer p::before {
     z-index: 2;
 }
 
-/* Descripción */
+/* Descripción (ranking) */
 .ranking-description {
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
@@ -955,7 +967,7 @@ footer p::before {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: 50px; /* Aumentamos el margen inferior para evitar que quede pegado al siguiente contenido */
+    margin-bottom: 50px;
     gap: 30px;
 }
 
@@ -1002,7 +1014,7 @@ footer p::before {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 80px; /* Agregamos margen inferior para evitar que se tape con el footer */
+    margin-bottom: 80px;
 }
 
 /* Estilo de los elementos en la lista */
@@ -1065,6 +1077,4 @@ footer p::before {
         text-align: center;
         margin-top: 10px;
     }
-
-
 }
