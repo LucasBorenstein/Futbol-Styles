@@ -1,25 +1,31 @@
-@mixin flex-center($direction: column) {
+@mixin flex-center {
     display: flex;
-    flex-direction: $direction;
+    justify-content: center;
     align-items: center;
 }
 
-@mixin button-style {
-    background: $color-boton;
-    color: white;
+@mixin boton-estilizado {
+    background-color: $color-boton;
     border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
-        background: $color-boton-hover;
+        background-color: $color-boton-hover;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
     }
 }
 
-@mixin card-shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@mixin sombra-neon {
+    text-shadow: 0 0 5px $color-hover, 0 0 10px $color-hover, 0 0 20px $color-hover;
+}
+
+@mixin gradiente-texto {
+    background: linear-gradient(45deg, $color-secundario, #00FF7F, #1E90FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }

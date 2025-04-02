@@ -2,9 +2,10 @@
 @import "base/mixins";
 @import "layout/navbar";
 @import "layout/footer";
-@import "layout/container";
+@import "layout/contacto";
 @import "components/cards";
 
+// Estilos generales
 body {
     font-family: 'Poppins', sans-serif;
     background: $color-crema-claro;

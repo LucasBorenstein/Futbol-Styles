@@ -6,17 +6,11 @@
 
 html,
 body {
-    width: 100%;
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: $fuente-principal;
+    background: $color-fondo;
+    overflow-x: hidden;
     scroll-behavior: smooth;
-}
-
-ul,
-ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -24,29 +18,15 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
 
 img {
     max-width: 100%;
     height: auto;
-    display: block;
-}
-
-
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-family: inherit;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0;
-    padding: 0;
 }

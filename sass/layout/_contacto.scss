@@ -1,0 +1,97 @@
+$contacto-bg: linear-gradient(to bottom, #003700, #000000);
+$contacto-box-bg: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+$contacto-text-color: #FFD700;
+$contacto-container-bg: rgba(20, 20, 20, 0.9);
+$input-bg: rgba(30, 30, 30, 0.7);
+$input-focus-bg: #1e1e1e;
+$input-border: #FFD700;
+$input-focus-border: #00ffcc;
+$btn-bg: #28a745;
+$btn-hover-bg: #007f00;
+
+#contacto {
+    background: $contacto-bg;
+}
+
+.contacto-section {
+    background: $contacto-box-bg;
+    padding: 50px 15px;
+    text-align: center;
+    color: $contacto-text-color;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: $contacto-container-bg;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: $contacto-text-color;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid $input-border;
+        background: $input-bg;
+        color: white;
+        font-size: 1rem;
+        @include transition(all 0.3s ease); 
+
+        &:focus {
+            background-color: $input-focus-bg;
+            border-color: $input-focus-border;
+            outline: none;
+        }
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: none;
+    }
+}
+
+.btn-submit {
+    background-color: $btn-bg;
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    @include transition(all 0.3s ease); 
+
+    &:hover {
+        background-color: $btn-hover-bg;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+}
