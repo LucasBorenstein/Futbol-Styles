@@ -1,0 +1,7 @@
+.container {
+    width: 90%;
+    max-width: $max-width-container;
+    @include flex-center();
+    gap: 15px;
+    padding-bottom: 80px; 
+}

@@ -1,0 +1,15 @@
+@import "base/variables";
+@import "base/mixins";
+@import "layout/navbar";
+@import "layout/footer";
+@import "layout/container";
+@import "components/cards";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: $color-crema-claro;
+    color: $color-marron;
+    margin: 0;
+    padding: 0;
+    @include flex-center();
+}
