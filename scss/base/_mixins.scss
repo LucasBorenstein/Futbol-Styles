@@ -29,3 +29,8 @@
     background-clip: text;
     color: transparent;
 }
+
+// 🔥 Agregamos el mixin transition que estaba faltando
+@mixin transition($property, $duration) {
+    transition: $property $duration ease-in-out;
+}

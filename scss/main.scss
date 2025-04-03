@@ -1,9 +1,10 @@
-@import "base/variables";
-@import "base/mixins";
-@import "layout/navbar";
-@import "layout/footer";
-@import "layout/contacto";
-@import "components/cards";
+@use "base/variables";
+@use "base/mixins";
+@use "layout/navbar";
+@use "layout/footer";
+@use "layout/contacto";
+
+
 
 // Estilos generales
 body {

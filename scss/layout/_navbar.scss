@@ -1,22 +1,18 @@
-// Variables específicas del navbar
-$navbar-bg: #004d00;
-$navbar-text-color: white;
-$highlight-color: #FFD700;
-$shadow-color: rgba(0, 0, 0, 0.2);
-$hover-shadow: rgba(255, 215, 0, 0.8);
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $navbar-bg !important;
+    background: v.$navbar-bg !important;
     padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px $shadow-color;
+    box-shadow: 0 4px 8px v.$shadow-color;
 }
 
 .navbar-brand {
@@ -24,7 +20,7 @@ $hover-shadow: rgba(255, 215, 0, 0.8);
     left: 20px;
     font-size: 1.8rem;
     font-weight: bold;
-    color: $highlight-color !important;
+    color: v.$highlight-color !important;
 }
 
 .navbar-nav {
@@ -42,14 +38,16 @@ $hover-shadow: rgba(255, 215, 0, 0.8);
     padding: 10px 20px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.1);
-    color: $navbar-text-color !important;
+    color: v.$navbar-text-color !important;
     font-weight: bold;
-    @include transition(all, 0.3s);
+
+
+    @include m.transition(all, 0.3s);
 
     &:hover {
-        background: $highlight-color;
-        color: $navbar-bg !important;
-        box-shadow: 0px 0px 10px $hover-shadow;
+        background: v.$highlight-color;
+        color: v.$navbar-bg !important;
+        box-shadow: 0px 0px 10px v.$hover-shadow;
         transform: scale(1.1);
     }
 }
