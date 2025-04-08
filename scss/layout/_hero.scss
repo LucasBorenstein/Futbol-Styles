@@ -1,0 +1,10 @@
+@use "../base/mixins" as m;
+
+.hero {
+  min-height: 100vh;
+  @include m.flex-center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+
+}

@@ -1,3 +1,8 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m; 
+
+
+
 $footer-bg: rgba(0, 0, 0, 0.8);
 $footer-text-color: white;
 $border-color: rgba(255, 215, 0, 0.6);
@@ -33,7 +38,9 @@ footer {
         font-family: 'Orbitron', sans-serif;
         text-shadow: 0 0 2px $glow-gold, 0 0 5px $glow-green, 0 0 10px $glow-blue;
         display: inline-block;
-        @include transition(text-shadow, 0.5s);
+        transition: all 0.3s ease-in-out;
+
+
 
         &:hover {
             text-shadow: 0 0 5px rgba(255, 215, 0, 0.7), 0 0 10px rgba(0, 255, 127, 0.5), 0 0 15px rgba(30, 144, 255, 0.4);

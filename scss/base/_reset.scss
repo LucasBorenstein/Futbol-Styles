@@ -6,12 +6,19 @@
 
 html,
 body {
-    height: 100%;
-    font-family: $fuente-principal;
-    background: $color-fondo;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    background: #fefae0;
+    margin: 0;
+    padding: 0;
 }
+
+#hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 a {
     text-decoration: none;

@@ -1,3 +1,6 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m; 
+
 $contacto-bg: linear-gradient(to bottom, #003700, #000000);
 $contacto-box-bg: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
 $contacto-text-color: #FFD700;
@@ -63,7 +66,8 @@ $btn-hover-bg: #007f00;
         background: $input-bg;
         color: white;
         font-size: 1rem;
-        @include transition(all 0.3s ease); 
+        transition: all 0.3s ease-in-out;
+
 
         &:focus {
             background-color: $input-focus-bg;
@@ -87,7 +91,7 @@ $btn-hover-bg: #007f00;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
-    @include transition(all 0.3s ease); 
+    
 
     &:hover {
         background-color: $btn-hover-bg;

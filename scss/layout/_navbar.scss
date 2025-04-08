@@ -1,5 +1,4 @@
 @use "../base/variables" as v;
-@use "../base/mixins" as m;
 
 .navbar {
     display: flex;
@@ -40,9 +39,7 @@
     background: rgba(255, 255, 255, 0.1);
     color: v.$navbar-text-color !important;
     font-weight: bold;
-
-
-    @include m.transition(all, 0.3s);
+    transition: all 0.3s ease-in-out; 
 
     &:hover {
         background: v.$highlight-color;
